@@ -1,0 +1,65 @@
+int counter;
+int d;
+int j;
+int n;
+int k;
+
+
+print()
+{	putstring("\n");
+	d=0;
+	while(d<40-(j/2))
+	{	putstring(" ");
+		d=d+1;
+	}
+	d=0;
+	while(d<j)
+	{	putstring("*");
+		d=d+1;
+	}
+	putstring("\t Fibonacci (");
+	putint(counter+1);
+	putstring(") : ");
+	putint(j);
+}
+	
+			
+
+fibonacci()
+{	j=0;
+	k=1;
+	counter=0;
+	while(counter<n)
+	{	j=j+k;
+		k=j-k;
+		print();
+		counter=counter+1;
+	}
+}
+	
+teleioma1()
+{	j=0;
+	putstring("\n");
+	while(j<2)
+	{	
+		d=0;
+		while(d<40)
+		{	putstring(" ");
+			d=d+1;
+		}
+		putstring("@\n");
+	       	j=j+1;
+	}
+	putstring("\n                               Merry Christmas!!\n");
+}
+	
+	
+
+aegean()
+{	putstring("\nPLEASE for the first time, insert number 7 \n");
+	putstring("Insert n:");
+	getint(n);
+	fibonacci();
+	teleioma1();
+	
+}
