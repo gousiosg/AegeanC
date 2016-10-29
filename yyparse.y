@@ -1,4 +1,14 @@
 
+%{
+#include <stdlib.h>
+#include <stdio.h>
+
+struct s_tree *t;
+struct list *var_list;
+struct list *fun_list;
+
+%}
+
 %union yylval{           
 	char *s;
 	int n;
@@ -88,12 +98,6 @@ expr:    VAR                      { m_search_results(var_list,$1);$$=mkvariable(
 ;
 
 %%
-
-#include <stdio.h>
-
-struct s_tree *t;
-struct list *var_list;
-struct list *fun_list;
 
 main()
 {
